@@ -5,7 +5,10 @@ module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
-    './app/app.jsx'
+    'script!fusioncharts/fusioncharts.js',
+    'script!fusioncharts/fusioncharts.charts.js',
+    './app/app.jsx',
+    'script!react-fusioncharts/dist/react-fusioncharts.js'
   ],
   externals: {
     jquery: 'jQuery'
@@ -22,6 +25,10 @@ module.exports = {
   },
   resolve: {
     root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/components'
+    ],
     alias: {
       applicationStyles: 'app/styles/app.scss'
     },
